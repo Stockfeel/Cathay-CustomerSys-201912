@@ -1,0 +1,60 @@
+// color 
+$primary: #05b074
+$primaryLight: rgb(189, 235, 191)
+$primaryLighter: rgb(233, 249, 234)
+$secondary: #f2b200
+$header: rgba(195, 227, 227, 0.4)
+$text: #616161
+
+// top 
+$fix-top: 150px
+
+// font
+
+// default 
+@mixin initialize 
+  *
+    transition: .3s
+    box-sizing: border-box
+  body, html 
+    width: 100%
+    margin: 0
+    height: 0
+  li
+    list-style: none
+  p, h1
+    margin: 0
+  button
+    border: none
+
+@mixin size($w, $h:$w)
+    width: $w
+    height: $h
+
+@mixin flexCenter()
+  display: flex
+  justify-content: center
+  align-items: cente
+
+@mixin btn($bgColor, $textColor)
+  display: inline-block
+  border-radius: 20px
+  background-color: $bgColor
+  border: 1px solid $bgColor
+  font-size: 16px
+  font-weight: bold
+  font-stretch: normal
+  font-style: normal
+  line-height: 1.38
+  letter-spacing: normal
+  text-align: center
+  color: $textColor
+
+@mixin font($size, $color)
+  font-size: $size
+  font-stretch: normal
+  font-style: normal
+  line-height: 1.38
+  letter-spacing: normal
+  color: $color
+
