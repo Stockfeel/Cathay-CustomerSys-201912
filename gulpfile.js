@@ -16,9 +16,9 @@ function browserSync(done) {
 }
 
 function watchFiles() {
-  watch("./src/main.sass", sassTranspile);
-  watch("./src/index.pug", turnPug);
-  watch("./src/app.js", jsUglify);
+  watch("./src/*.sass", sassTranspile);
+  watch("./src/*.pug", turnPug);
+  watch("./src/*.js", jsUglify);
   watch("./docs/*", browserSyncReload);
 }
 
