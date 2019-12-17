@@ -78,10 +78,16 @@ header
   background: $primaryLighter
 
 .result__title 
+  position: relative
+  display: inline-block
+  margin-left: 50%
   font-size: 16px 
   text-align: center
+  transform: translateX(-50%)
   color: $text
   font-weight: bold
+  &.hidden
+    display: none
 
 .result__list 
   display: flex
@@ -157,9 +163,8 @@ table
   margin: 10px 
   width: 97%
   word-break: break-word
-  border-bottom-left-radius: 10px
-  border-bottom-right-radius: 10px
-  border-bottom: 1px solid $header
+  border-radius: 10px
+  border: 1px solid $header
   th
     max-width: 85px
     border: 1px solid $header
@@ -176,6 +181,8 @@ table
     border-left: none
     border-bottom: none
     vertical-align: top
+    &:last-child
+      border-right: none
     p.warning
       margin-top: 5px
       margin-left: 20px
@@ -237,7 +244,7 @@ table
 // hover box adjustment
 #hover-sameId
   margin-top: 10px
-  margin-left: 690px
+  margin-left: 100px
 #hover-vip
   margin-top: 20px
   margin-left: 150px
