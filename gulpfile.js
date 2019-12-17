@@ -16,9 +16,9 @@ function browserSync(done) {
 }
 
 function watchFiles() {
-  watch("./src/*.sass", sassTranspile);
-  watch("./src/*.pug", turnPug);
-  watch("./src/*.js", jsUglify);
+  watch("./src/main.sass", sassTranspile);
+  watch("./src/index.pug", turnPug);
+  watch("./src/app.js", jsUglify);
   watch("./docs/*", browserSyncReload);
 }
 
@@ -28,20 +28,20 @@ function browserSyncReload(done) {
 }
 
 function sassTranspile() {
-  return src('./src/*.sass')
+  return src('./src/main.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(dest('./docs'));
 }
 
 function jsUglify() {
-  return src('./src/*.js')
+  return src('./src/app.js')
     .pipe(babel({ presets: ['@babel/env'] }))
     .pipe(uglify())
     .pipe(dest('./docs'));
 }
 
 function turnPug() {
-  return src('./src/*.pug') 
+  return src('./src/index.pug') 
     .pipe(pug())
     .pipe(dest('./docs')); 
 }

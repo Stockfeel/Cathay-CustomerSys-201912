@@ -3,30 +3,38 @@ $primary: #05b074
 $primaryLight: rgb(189, 235, 191)
 $primaryLighter: rgb(233, 249, 234)
 $secondary: #f2b200
+$secondaryLight: #fdeab0
 $header: rgba(195, 227, 227, 0.4)
 $text: #616161
-
-// top 
-$fix-top: 150px
-
-// font
 
 // default 
 @mixin initialize 
   *
-    transition: .3s
+    transition: .2s
     box-sizing: border-box
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.38
+    letter-spacing: normal
   body, html 
     width: 100%
     margin: 0
     height: 0
+  ul
+    padding: 0
   li
     list-style: none
   p, h1
     margin: 0
+  a
+    color: #000
+    text-decoration: none
+    +font(16px, $text)
+    display: block
   button
     border: none
 
+// utilis
 @mixin size($w, $h:$w)
     width: $w
     height: $h
@@ -34,13 +42,26 @@ $fix-top: 150px
 @mixin flexCenter()
   display: flex
   justify-content: center
-  align-items: cente
+  align-items: center
+  flex-wrap: wrap
 
 @mixin btn($bgColor, $textColor)
-  display: inline-block
-  border-radius: 20px
+  color: $textColor
   background-color: $bgColor
   border: 1px solid $bgColor
+  &:hover 
+    color: $bgColor
+    background-color: $textColor
+    border: 1px solid $textColor
+
+@mixin font($size, $color)
+  font-size: $size
+  color: $color
+
+// component
+.btn 
+  display: inline-block
+  border-radius: 20px
   font-size: 16px
   font-weight: bold
   font-stretch: normal
@@ -48,13 +69,186 @@ $fix-top: 150px
   line-height: 1.38
   letter-spacing: normal
   text-align: center
-  color: $textColor
+  padding: 3px 10px
 
-@mixin font($size, $color)
-  font-size: $size
-  font-stretch: normal
-  font-style: normal
-  line-height: 1.38
-  letter-spacing: normal
-  color: $color
+.order
+  width: 16px 
+  height: 16px
+  text-align: right
+  display: inline-block  
+  &.up
+    background: url('./asset/up.svg')
+    background-position: center
+    background-repeat: no-repeat
+  &.down
+    background: url('./asset/down.svg')
+    background-position: center
+    background-repeat: no-repeat
 
+.hover
+  position: absolute
+  +size(260px, auto)
+  padding: 15px 18px
+  +font(14px, $text)
+  font-weight: normal
+  background: #fff
+  box-shadow: 0 0 15px 0 rgba(210, 70, 95, 0.5)
+  border-radius: 12px
+  .hover__title
+    color: $secondary
+    font-weight: bold
+    margin-bottom: 5px
+.hover__up
+  &::before
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 10px 10px 10px
+    top: -10px
+    left: 10px
+    border-color: transparent transparent #fff transparent
+.hover__down
+  &::before
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 10px 10px 0px 10px
+    bottom: -10px
+    left: 10px
+    border-color: #fff transparent transparent transparent
+
+.popup 
+  position: fixed
+  +flexCenter()
+  flex-direction: column
+  left: 50%
+  top: 50%
+  transform: translate(-115%, -50%)
+  +size(524px, 377px)
+  border-radius: 8px
+  z-index: 10
+  box-shadow: 0 2px 14px 0 rgba(5, 176, 116, 0.73)
+  background-color: #ecf7ea
+  &>*:not(:first-child)
+    margin: 20px auto
+  .btn
+    +btn($primary, white)
+    padding: 10px 37px
+  .popup__cancel
+    position: absolute
+    top: 20px
+    right: 20px
+
+.pagination
+  +flexCenter
+  .pagination__btn
+    border: 1px solid $primary
+    border-radius: 20px 
+    background: #fff
+    padding: 7px 15px
+    color: $primary
+    & > *
+    margin: 10px
+    &:hover 
+      background-color: #c6e6bf
+  ul 
+    +flexCenter
+    li
+      margin: 5px
+      +flexCenter()
+      +size(30px)
+      +font(16px, white)
+      border-radius: 15px
+      color: $primary
+      &.now
+        border: 1px solid $primary
+        background: $primary
+        color: #fff
+
+.back
+  position: fixed
+  background: url('./asset/top.svg')
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  right: 33.33% 
+  z-index: 10
+  margin-right: 50px
+  bottom: 50px 
+  +size(70px)
+  border-radius: 50%
+
+// state 
+.success 
+  font-weight: bold
+  color: $primary 
+.fail 
+  font-weight: bold
+  color: #d2465f
+.warning
+  +font(12px, $secondary)
+  &:before 
+    content: ' '
+    position: absolute
+    width: 16px 
+    height: 16px
+    background: url('./asset/warm.svg')
+    background-position: center
+    background-repeat: no-repeat
+    margin-left: -20px
+.info
+  &:after 
+    content: ' '
+    position: absolute
+    width: 16px 
+    height: 16px
+    background: url('./asset/tooltips.svg')
+    background-position: center
+    background-repeat: no-repeat
+    margin-left: 10px
+    margin-top: 2px
+.link
+  text-decoration: underline
+  cursor: pointer
+.type 
+  background: #c3e3e3
+  color: #008cbb
+  border-radius: 20px
+  margin-top: 2px
+  font-size: 12px
+.icon
+  width: 16px 
+  height: 16px
+  text-align: right
+  display: inline-block
+  background: url('./asset/invalid-name.svg')
+  background-position: center
+  background-repeat: no-repeat
+.vip
+  background: $secondaryLight
+  margin-left: 15px
+  padding: 7px 13px
+  border-radius: 20px
+  +font(18px, $secondary)
+  &::before
+    width: 16px 
+    height: 16px
+    text-align: right
+    display: inline-block
+    background: url('./asset/diamond.png')
+    background-position: center
+    background-repeat: no-repeat
+.tag
+  color: $primary
+.annotate 
+  +font(12px, #0081b8)
+
+// utlis class
+.hidden
+  display: none
+.shadow
+  box-shadow: -13px 8px 13px 3px rgba(5, 176, 116, 0.45)
