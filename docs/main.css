@@ -71,7 +71,7 @@
   flex-direction: column;
   left: 50%;
   top: 50%;
-  transform: translate(-115%, -50%);
+  transform: translate(-100%, -50%);
   width: 524px;
   height: 377px;
   border-radius: 8px;
@@ -260,7 +260,7 @@ button {
 header {
   width: 66.666%;
   position: fixed;
-  z-index: 10; }
+  z-index: 5; }
 
 .header__warning {
   display: flex;
@@ -349,8 +349,6 @@ header {
   text-align: center;
   color: #616161;
   font-weight: bold; }
-  .result__title::after {
-    background-image: url(""); }
 
 .result__list {
   display: flex;
