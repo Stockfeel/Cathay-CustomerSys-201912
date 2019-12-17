@@ -8,7 +8,7 @@ const browsersync = require('browser-sync').create();
 function browserSync(done) {
   browsersync.init({
     server: {
-      baseDir: "./dist"
+      baseDir: "./docs"
     },
     port: 3000
   });
@@ -19,7 +19,7 @@ function watchFiles() {
   watch("./src/*.sass", sassTranspile);
   watch("./src/*.pug", turnPug);
   watch("./src/*.js", jsUglify);
-  watch("./dist/*", browserSyncReload);
+  watch("./docs/*", browserSyncReload);
 }
 
 function browserSyncReload(done) {
@@ -30,20 +30,20 @@ function browserSyncReload(done) {
 function sassTranspile() {
   return src('./src/*.sass')
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest('./dist'));
+    .pipe(dest('./docs'));
 }
 
 function jsUglify() {
   return src('./src/*.js')
     .pipe(babel({ presets: ['@babel/env'] }))
     .pipe(uglify())
-    .pipe(dest('./dist'));
+    .pipe(dest('./docs'));
 }
 
 function turnPug() {
   return src('./src/*.pug') 
     .pipe(pug())
-    .pipe(dest('./dist')); 
+    .pipe(dest('./docs')); 
 }
 
 const monitor = parallel(watchFiles, browserSync);
