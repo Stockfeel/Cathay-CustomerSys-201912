@@ -352,7 +352,8 @@ header {
   width: 100%;
   height: 129px;
   padding: 10px 0;
-  background: #e9f9ea; }
+  background: #e9f9ea;
+  overflow: hidden; }
 
 .result__title {
   position: relative;
