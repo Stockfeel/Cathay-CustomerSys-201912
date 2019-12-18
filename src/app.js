@@ -18,6 +18,20 @@ window.addEventListener('scroll', (evt) => {
   }
 })
 
+// inputs
+document.querySelector('#input-id').addEventListener('focus', () => {
+  document.querySelector('#id').checked = true;
+})
+document.querySelector('#input-num').addEventListener('focus', () => {
+  document.querySelector('#num').checked = true;
+})
+document.querySelector('#id').addEventListener('click', () => {
+  document.querySelector('#input-id').focus();;
+})
+document.querySelector('#num').addEventListener('click', () => {
+  document.querySelector('#input-num').focus();;
+})
+
 // tooltips
 document.querySelector('#info-sameId').addEventListener('mouseover', () => {
   document.querySelector('#tooltip-sameId').classList.remove('hidden')
@@ -47,10 +61,19 @@ document.querySelector('.popup').addEventListener('click', (evt) => {
 })
 
 document.querySelector('.products__titles').addEventListener('click', (evt) => {
+  if(evt.target.classList.contains('subhead')) {
+    evt.target.querySelector('.order').classList.toggle('up');
+    evt.target.querySelector('.order').classList.toggle('down');
+  }
   if(evt.target.classList.contains('order')) {
     evt.target.classList.toggle('up');
     evt.target.classList.toggle('down');
-}});
+  }
+  if(evt.target.classList.contains('order__key')) {
+    evt.target.parentNode.querySelector('.order').classList.toggle('up');
+    evt.target.parentNode.querySelector('.order').classList.toggle('down');
+  }
+});
 
 // scroll to top
 function scrollTo(element, to, duration) {

@@ -4,6 +4,8 @@ html
   head 
     title 國泰人壽客服輔銷系統
     link(rel='stylesheet' type='text/css' href='./main.css')
+    link(href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+TC:400,700&display=swap" rel="stylesheet")
+
   body
     .popup
       img(src='./asset/cancel.svg').popup__cancel.popup__close
@@ -20,12 +22,12 @@ html
           .input__label
             input(type='radio' id='id' name='info' value='id') 
             label(for='id') ID
-          input(type='text')  
+          input(type='text' id='input-id')  
         .search__input
           .input__label
             input(type='radio' id='num' name='info' value='num') 
             label(for='num') 保單
-          input(type='text')  
+          input(type='text' id='input-num')  
         button(type='submit' class='btn') 查詢 F2
       .header__result
         .result__title
@@ -186,7 +188,7 @@ html
               each val in productInfo 
                 td.subhead
                   .subhead__wrapper
-                    p= val.name
+                    p.order__key= val.name
                     div.order.up
           tbody 
             while n < 50

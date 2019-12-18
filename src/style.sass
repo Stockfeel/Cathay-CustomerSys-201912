@@ -16,6 +16,9 @@ $text: #616161
     font-style: normal
     line-height: 1.38
     letter-spacing: normal
+    cursor: default
+    font-family: 'Lato', 'Noto Sans TC'
+
   body, html 
     width: 100%
     margin: 0
@@ -70,12 +73,14 @@ $text: #616161
   letter-spacing: normal
   text-align: center
   padding: 3px 10px
+  cursor: pointer
 
 .order
   width: 16px 
   height: 16px
   text-align: right
   display: inline-block  
+  cursor: pointer
   &.up
     background: url('./asset/up.svg')
     background-position: center
@@ -89,6 +94,7 @@ $text: #616161
   position: absolute
   +size(260px, auto)
   padding: 15px 18px
+  text-align: left
   +font(14px, $text)
   font-weight: normal
   background: #fff
@@ -139,10 +145,12 @@ $text: #616161
   .btn
     +btn($primary, white)
     padding: 10px 37px
+    cursor: pointer
   .popup__cancel
     position: absolute
     top: 20px
     right: 20px
+    cursor: pointer
 
 .pagination
   +flexCenter
@@ -179,6 +187,7 @@ $text: #616161
   bottom: 50px 
   +size(70px)
   border-radius: 50%
+  cursor: pointer
 
 // state 
 .success 
@@ -188,7 +197,7 @@ $text: #616161
   font-weight: bold
   color: #d2465f
 .warning
-  +font(12px, $secondary)
+  +font(14px, #ee7f02)
   &:before 
     content: ' '
     position: absolute
@@ -198,6 +207,7 @@ $text: #616161
     background-position: center
     background-repeat: no-repeat
     margin-left: -20px
+    margin-top: 2px
 .info
   &:after 
     content: ' '
@@ -218,6 +228,7 @@ $text: #616161
   border-radius: 20px
   margin-top: 2px
   font-size: 12px
+  cursor: pointer
 .icon
   width: 16px 
   height: 16px
@@ -246,7 +257,7 @@ $text: #616161
 .tag
   color: $primary
 .annotate 
-  +font(12px, #0081b8)
+  +font(14px, #0081b8)
 
 // utlis class
 .hidden
