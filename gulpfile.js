@@ -1,6 +1,6 @@
 const { watch, src, dest, series, parallel } = require('gulp');
 const sass = require('gulp-sass');
-const uglify = require('gulp-uglify');
+const beautify = require('gulp-beautify');
 const babel = require('gulp-babel');
 const pug = require('gulp-pug');
 const browsersync = require('browser-sync').create();
@@ -36,13 +36,14 @@ function sassTranspile() {
 function jsUglify() {
   return src('./src/app.js')
     .pipe(babel({ presets: ['@babel/env'] }))
-    .pipe(uglify())
+    .pipe(beautify.js({ indent_size: 2 }))
     .pipe(dest('./docs'));
 }
 
 function turnPug() {
   return src('./src/index.pug') 
     .pipe(pug())
+    .pipe(beautify.html({ indent_size: 2 }))
     .pipe(dest('./docs')); 
 }
 

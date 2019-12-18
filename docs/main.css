@@ -363,12 +363,12 @@ header {
   text-align: center;
   color: #616161;
   font-weight: bold;
+  z-index: 2;
   opacity: 1;
   transform: translate(-50%, 0);
   transition: opacity .2s; }
   .result__title.hidden {
-    opacity: 0;
-    transition: opacity .2s; }
+    opacity: 0; }
 
 .result__list {
   display: flex;
