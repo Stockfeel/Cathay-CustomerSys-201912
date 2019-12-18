@@ -149,9 +149,14 @@ main
       align-items: center
       +font(16px, #616161)
       cursor: pointer
+      &.select
+        font-weight: bold
+        color: $primary
     li:not(:last-child):after 
       margin-left: 34.6px
       content: '|'
+      color: #616161
+      font-weight: normal
 
 .todos
   display: inline-block

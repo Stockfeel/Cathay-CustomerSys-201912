@@ -18,6 +18,15 @@ window.addEventListener('scroll', (evt) => {
   }
 })
 
+// navigation
+document.querySelector('.navigation').addEventListener('click', (evt) => {
+  console.log(evt.target.tagName)
+  if(evt.target.tagName === 'LI') {
+    evt.target.parentNode.querySelectorAll('li').forEach(item => item.classList.remove('select'))
+    evt.target.classList.add('select')
+  }
+})
+
 // inputs
 document.querySelector('#input-id').addEventListener('focus', () => {
   document.querySelector('#id').checked = true;
