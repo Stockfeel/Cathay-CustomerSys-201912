@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="55" height="30" viewBox="0 0 55 30">
-    <g fill="none" fill-rule="evenodd" stroke="#05B074" transform="matrix(-1 0 0 1 55 0)">
-        <rect width="54" height="29" x=".5" y=".5" fill="#FFF" rx="14.5"/>
-        <path stroke-linecap="round" stroke-width="2" d="M31 9l7.14 6.297L31 21.594M21 9l7.14 6.297L21 21.594"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="17" viewBox="0 0 28 17">
+    <g fill="none" fill-rule="evenodd" stroke="#05B074" stroke-linecap="round" stroke-width="2">
+        <path d="M11 2L3.86 8.297 11 14.594M21 2l-7.14 6.297L21 14.594"/>
     </g>
 </svg>
