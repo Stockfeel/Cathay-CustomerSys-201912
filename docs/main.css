@@ -437,9 +437,14 @@ main {
       font-size: 16px;
       color: #616161;
       cursor: pointer; }
+      .navigation ul li.select {
+        font-weight: bold;
+        color: #05b074; }
     .navigation ul li:not(:last-child):after {
       margin-left: 34.6px;
-      content: '|'; }
+      content: '|';
+      color: #616161;
+      font-weight: normal; }
 
 .todos {
   display: inline-block;

@@ -20,6 +20,17 @@ window.addEventListener('scroll', function(evt) {
     document.querySelector('.result__info').classList.remove('hidden');
     document.querySelector('.header__warning').classList.remove('hidden');
   }
+}); // navigation
+
+document.querySelector('.navigation').addEventListener('click', function(evt) {
+  console.log(evt.target.tagName);
+
+  if (evt.target.tagName === 'LI') {
+    evt.target.parentNode.querySelectorAll('li').forEach(function(item) {
+      return item.classList.remove('select');
+    });
+    evt.target.classList.add('select');
+  }
 }); // inputs
 
 document.querySelector('#input-id').addEventListener('focus', function() {
