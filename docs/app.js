@@ -1,1 +1,79 @@
-"use strict";function ownKeys(t,e){var n=Object.keys(t);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(t);e&&(r=r.filter(function(e){return Object.getOwnPropertyDescriptor(t,e).enumerable})),n.push.apply(n,r)}return n}function _objectSpread(t){for(var e=1;e<arguments.length;e++){var n=null!=arguments[e]?arguments[e]:{};e%2?ownKeys(Object(n),!0).forEach(function(e){_defineProperty(t,e,n[e])}):Object.getOwnPropertyDescriptors?Object.defineProperties(t,Object.getOwnPropertyDescriptors(n)):ownKeys(Object(n)).forEach(function(e){Object.defineProperty(t,e,Object.getOwnPropertyDescriptor(n,e))})}return t}function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}var fields={POLICY_NO:48677377322,CLC_NO:"A77536Y",PROD_SNAME:"HN1富貴保本三福",APC_NAME:"林國泰",IS_JURISTIC:"Y",APC_ID:"H123456789",APC_BRDY:"76/11/26",INSD_NAME:"林國泰",INSD_ID:"H123456789",INSD_BRDY:"76/11/26",EFT_CODE:"終身險滿期",MNXT_PAY_DATE:"逾期",IS_INV:"Y",AUTO_PREM_AMTINT:0,LOAN_BAL:0,LOAN_INT:0,INT_END_DATE:0},keys=Object.keys(fields),productInfo=["序號","保單號碼收費代號","商品名稱","要保人姓名","要保人ID","要保人生日","被保人姓名","被保人ID","被保人生日","契約狀況","下次應繳日/繳費管道","墊繳本息","貸款金額/貸款利息","繳息終期"],testData=Array(50).fill(null).map(function(e,t){return _objectSpread({},fields,{ID:t})});function renderList(e){e.map(function(e){var t=document.createElement("tr");t.innerHTML="\n      <td>\n        ".concat(e.ID,"\n      </td>\n      <td> \n        <a class='link' href='#' target=\"_blank\">").concat(e.POLICY_NO,"</a>\n        <a class='link' href='#' target=\"_blank\">").concat(e.CLC_NO,"</a>\n      </td> \n      <td class='products__name'> \n        <a class='link' href='#' target=\"_blank\">").concat(e.PROD_SNAME,"</a>\n        <a class='link icon' href='#' target=\"_blank\"></a>\n      </td>\n      <td> \n        <div>").concat(e.APC_NAME,"</div>\n        <a class='type' href='#' target=\"_blank\">").concat(e.IS_JURISTIC?"公司件":"","</a>\n      </td>\n      <td>").concat(e.APC_ID,"</td>\n      <td>").concat(e.APC_BRDY,"</td>\n      <td>").concat(e.INSD_NAME,"</td>\n      <td>").concat(e.INSD_ID,"</td>\n      <td>").concat(e.INSD_BRDY,"</td>\n      <td>\n        <div>").concat(e.EFT_CODE,"</div>\n        <div>").concat(e.MNXT_PAY_DATE,"</div>\n      </td>\n      <td>\n        <a class='link' href='#' target=\"_blank\">48677377322</a>\n        <div>扣繳/自繳</div>\n      </td>\n      <td>").concat(e.AUTO_PREM_AMTINT,"</td>\n      <td>").concat(e.LOAN_BAL,"/").concat(e.LOAN_INT,"</td>\n      <td>").concat(e.INT_END_DATE,"</td>\n    "),document.querySelector(".products tbody").appendChild(t)})}document.querySelector(".back").addEventListener("click",function(){return window.scrollTo(0,0)}),window.addEventListener("scroll",function(e){274<window.pageYOffset?(document.querySelector(".header__result").style.height="84px",document.querySelector(".header__result").classList.add("shadow"),document.querySelector(".result__title").classList.add("hidden"),document.querySelector(".result__info").classList.add("hidden")):(document.querySelector(".header__result").style.height="129px",document.querySelector(".header__result").classList.remove("shadow"),document.querySelector(".result__title").classList.remove("hidden"),document.querySelector(".result__info").classList.remove("hidden"))}),document.querySelector("#info-sameId").addEventListener("mouseover",function(){document.querySelector("#hover-sameId").classList.remove("hidden")}),document.querySelector("#info-sameId").addEventListener("mouseout",function(){document.querySelector("#hover-sameId").classList.add("hidden")}),document.querySelector("#info-vip").addEventListener("mouseover",function(){document.querySelector("#hover-vip").classList.remove("hidden")}),document.querySelector("#info-vip").addEventListener("mouseout",function(){document.querySelector("#hover-vip").classList.add("hidden")}),document.querySelector("#info-notRecommend").addEventListener("mouseover",function(){document.querySelector("#hover-notRecommend").classList.remove("hidden")}),document.querySelector("#info-notRecommend").addEventListener("mouseout",function(){document.querySelector("#hover-notRecommend").classList.add("hidden")}),document.querySelector(".popup").addEventListener("click",function(e){e.target.classList.contains("popup__close")&&document.querySelector(".popup").classList.add("hidden")}),document.querySelector(".products__titles").addEventListener("click",function(e){if(e.target.classList.contains("order")){var t,n=e.target.getAttribute("data-value");e.target.classList.toggle("up"),e.target.classList.toggle("down"),document.querySelector(".products tbody").innerHTML="",e.target.classList.contains("up")?t=testData.sort(function(e,t){return e[n]-t[n]}):e.target.classList.contains("down")&&(t=testData.sort(function(e,t){return t[n]-e[n]})),renderList(t)}}),renderList(testData);
+"use strict";
+
+// main
+document.querySelector('.back').addEventListener('click', function() {
+  return scrollTo(document.body, 0, 1250);
+});
+window.addEventListener('scroll', function(evt) {
+  if (window.pageYOffset > 274) {
+    document.querySelector('.header__result').style.height = '84px';
+    document.querySelector('.header__result').classList.add('shadow');
+    document.querySelector('.result__list').classList.add('hidden');
+    document.querySelector('.result__title').classList.add('hidden');
+    document.querySelector('.result__info').classList.add('hidden');
+    document.querySelector('.header__warning').classList.add('hidden');
+  } else {
+    document.querySelector('.header__result').style.height = '129px';
+    document.querySelector('.header__result').classList.remove('shadow');
+    document.querySelector('.result__list').classList.remove('hidden');
+    document.querySelector('.result__title').classList.remove('hidden');
+    document.querySelector('.result__info').classList.remove('hidden');
+    document.querySelector('.header__warning').classList.remove('hidden');
+  }
+}); // tooltips
+
+document.querySelector('#info-sameId').addEventListener('mouseover', function() {
+  document.querySelector('#tooltip-sameId').classList.remove('hidden');
+});
+document.querySelector('#info-sameId').addEventListener('mouseout', function() {
+  document.querySelector('#tooltip-sameId').classList.add('hidden');
+});
+document.querySelector('#info-vip').addEventListener('mouseover', function() {
+  document.querySelector('#tooltip-vip').classList.remove('hidden');
+});
+document.querySelector('#info-vip').addEventListener('mouseout', function() {
+  document.querySelector('#tooltip-vip').classList.add('hidden');
+});
+document.querySelector('#info-notRecommend').addEventListener('mouseover', function() {
+  document.querySelector('#tooltip-notRecommend').classList.remove('hidden');
+});
+document.querySelector('#info-notRecommend').addEventListener('mouseout', function() {
+  document.querySelector('#tooltip-notRecommend').classList.add('hidden');
+});
+document.querySelector('.popup').addEventListener('click', function(evt) {
+  if (evt.target.classList.contains('popup__close')) {
+    document.querySelector('.popup').classList.add('hidden');
+  }
+});
+document.querySelector('.products__titles').addEventListener('click', function(evt) {
+  if (evt.target.classList.contains('order')) {
+    evt.target.classList.toggle('up');
+    evt.target.classList.toggle('down');
+  }
+}); // scroll to top
+
+function scrollTo(element, to, duration) {
+  var start = element.scrollTop,
+    change = to - start,
+    currentTime = 0,
+    increment = 20;
+
+  var animateScroll = function animateScroll() {
+    currentTime += increment;
+    var val = Math.easeInOutQuad(currentTime, start, change, duration);
+    element.scrollTop = val;
+
+    if (currentTime < duration) {
+      setTimeout(animateScroll, increment);
+    }
+  };
+
+  animateScroll();
+}
+
+Math.easeInOutQuad = function(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t + b;
+  t--;
+  return -c / 2 * (t * (t - 2) - 1) + b;
+};

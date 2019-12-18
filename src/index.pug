@@ -30,7 +30,7 @@ html
       .header__result
         .result__title
           p 相同 ID 名單 #[span.info#info-sameId]
-          .hover.hover__up.hidden#hover-sameId 請依據客戶姓名點選並再點選查詢，僅將客戶基本資料依客戶姓名帶出，其餘資訊請至個交易畫面進行查詢與確認。
+          .tooltip.tooltip__up.hidden#tooltip-sameId 請依據客戶姓名點選並再點選查詢，僅將客戶基本資料依客戶姓名帶出，其餘資訊請至個交易畫面進行查詢與確認。
         ul.result__list 
           li.btn 林國泰（中華民國）
           li.btn 林國泰（中華民國）
@@ -52,8 +52,8 @@ html
             tr 
               th 姓名
               td 林國泰(#[span.tag 要]/#[span 被]) #[span.vip#info-vip VIP 鑽石級] 
-                .hover.hover__up.hidden#hover-vip 
-                  p.hover__title 貴賓別
+                .tooltip.tooltip__up.hidden#tooltip-vip 
+                  p.tooltip__title 貴賓別
                   p 國泰人壽白金 VIP (Super-VIP)
               td.warning 姓名不一致
               td 
@@ -157,7 +157,7 @@ html
             tr
               th 客戶 VOC #[span.info]
               td.fail 不推薦 (#[span.info__annotate.link#info-notRecommend 108/3/27 0800 客服])
-                .hover.hover__down.hidden#hover-notRecommend 產品沒有比同業優，商品金額也比較貴，不過服務人員服務佳是優點
+                .tooltip.tooltip__down.hidden#tooltip-notRecommend 產品沒有比同業優，商品金額也比較貴，不過服務人員服務佳是優點
               td
               td
                 a.btn(href='#' target="_blank") VOC 輸入
@@ -187,10 +187,34 @@ html
                 td.subhead
                   .subhead__wrapper
                     p= val.name
-                    div(data-value= val.key).order.up
+                    div.order.up
           tbody 
+            while n < 50
+              tr
+                td= n++
+                td 
+                  a.link 48677377322
+                  a.link A77536Y
+                td HN1富貴保本三福
+                td 
+                  p 林國泰
+                  p.type 公司件
+                td H123456789
+                td 76/11/26
+                td 林國泰
+                td H123456789
+                td 76/11/26
+                td 
+                  p 終身險滿期
+                  p 逾期
+                td 
+                  a.link 48677377322
+                  p 扣繳/自繳
+                td 0
+                td 0/0 
+                td 0
         .pagination
-          img(src='./asset/left2.svg').pagination__btn
+          img(src='./asset/left2.svg').pagination__btn 
           img(src='./asset/left.svg').pagination__btn
           ul.pagination__page
             li.now 1
