@@ -4,7 +4,7 @@ html
   head 
     title 國泰人壽客服輔銷系統
     link(rel='stylesheet' type='text/css' href='./main.css')
-    link(href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+TC:400,700&display=swap" rel="stylesheet")
+    // link(href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+TC:400,700&display=swap" rel="stylesheet")
 
   body
     .popup
@@ -32,19 +32,19 @@ html
       .header__result
         .result__title
           p 相同 ID 名單 #[span.info#info-sameId]
-          .tooltip.tooltip__up.hidden#tooltip-sameId 請依據客戶姓名點選並再點選查詢，僅將客戶基本資料依客戶姓名帶出，其餘資訊請至個交易畫面進行查詢與確認。
+          .tooltip.tooltip__up.hidden#tooltip-sameId 請依據客戶姓名點選並再點選查詢，僅將客戶基本資料依客戶姓名帶出，其餘資訊請至各交易畫面進行查詢與確認。
         ul.result__list 
           li.btn 林國泰（中華民國）
           li.btn 林國泰（中華民國）
           li.btn 林國泰（中華民國）
         .result__info ・為提供「VIP家戶」更佳服務體驗，新增「VIP家戶」顯示功能且僅供內勤同仁辨識之用，凡查詢結果顯示為「VIP家戶」，切勿主動告知客戶。
-    main
       nav.navigation
         ul 
           li.select 個人資訊
           li 待辦事項 #[span.todos 10]
           li 收付款資訊
           li 服務歷程
+    main
       section.tables
         table.basic
           thead 
@@ -74,10 +74,10 @@ html
         table.contact
           thead 
             tr
-              td(colspan='5') 通訊資料
+              td(colspan='5').info 通訊資料
           tbody 
             tr 
-              th.info 保單地址（最新異動物件）
+              th.info 保單地址（最新異動件）
               td(colspan='2') 台中市北屯區大鵬路陳平里12巷5弄258號6樓之3
               td
                 p.warning 同 ID 有不同地址
@@ -130,23 +130,13 @@ html
             td(colspan='4')  客戶事件
           tbody
             tr
-              th 特殊紀錄 #[span.info]
-              td 出險次數已達 #[span.info__risky 20] 次
-              td.warning 同 ID 有不同地址
-              td
-            tr
-              th 密戶 #[span.info]
-              td 否
-              td.warning 同 ID 有不同地址
-              td
-            tr
               th 風險等級 #[span.info]
               td 一般風險
               td
               td
-                a.btn(href='#' target="_blank") 客戶風險等級
+                a.btn(href='#' target="_blank") 客戶風險等級查詢
             tr
-              th 保護特殊註記
+              th 保戶特殊註記
               td 
               td
               td

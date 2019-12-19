@@ -2,8 +2,7 @@
 
 <head>
   <title>國泰人壽客服輔銷系統</title>
-  <link rel="stylesheet" type="text/css" href="./main.css" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+TC:400,700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="./main.css" /><!-- link(href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+TC:400,700&display=swap" rel="stylesheet")-->
 </head>
 
 <body>
@@ -28,7 +27,7 @@
     <div class="header__result">
       <div class="result__title">
         <p>相同 ID 名單 <span class="info" id="info-sameId"></span></p>
-        <div class="tooltip tooltip__up hidden" id="tooltip-sameId">請依據客戶姓名點選並再點選查詢，僅將客戶基本資料依客戶姓名帶出，其餘資訊請至個交易畫面進行查詢與確認。</div>
+        <div class="tooltip tooltip__up hidden" id="tooltip-sameId">請依據客戶姓名點選並再點選查詢，僅將客戶基本資料依客戶姓名帶出，其餘資訊請至各交易畫面進行查詢與確認。</div>
       </div>
       <ul class="result__list">
         <li class="btn">林國泰（中華民國）</li>
@@ -37,8 +36,6 @@
       </ul>
       <div class="result__info">・為提供「VIP家戶」更佳服務體驗，新增「VIP家戶」顯示功能且僅供內勤同仁辨識之用，凡查詢結果顯示為「VIP家戶」，切勿主動告知客戶。</div>
     </div>
-  </header>
-  <main>
     <nav class="navigation">
       <ul>
         <li class="select">個人資訊</li>
@@ -47,6 +44,8 @@
         <li>服務歷程</li>
       </ul>
     </nav>
+  </header>
+  <main>
     <section class="tables">
       <table class="basic">
         <thead>
@@ -82,12 +81,12 @@
       <table class="contact">
         <thead>
           <tr>
-            <td colspan="5">通訊資料</td>
+            <td class="info" colspan="5">通訊資料</td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th class="info">保單地址（最新異動物件）</th>
+            <th class="info">保單地址（最新異動件）</th>
             <td colspan="2">台中市北屯區大鵬路陳平里12巷5弄258號6樓之3</td>
             <td>
               <p class="warning">同 ID 有不同地址</p>
@@ -133,7 +132,7 @@
             <th>網路服務</th>
             <th>網路投保</th>
             <th>行動投保</th>
-            <th>電子單號</th>
+            <th>電子單據</th>
             <th>會員網站</th>
             <th>易call保</th>
             <th>ID一指通</th>
@@ -161,25 +160,13 @@
         </thead>
         <tbody>
           <tr>
-            <th>特殊紀錄 <span class="info"></span></th>
-            <td>出險次數已達 <span class="info__risky">20</span> 次</td>
-            <td class="warning">同 ID 有不同地址</td>
-            <td></td>
-          </tr>
-          <tr>
-            <th>密戶 <span class="info"></span></th>
-            <td>否</td>
-            <td class="warning">同 ID 有不同地址</td>
-            <td></td>
-          </tr>
-          <tr>
             <th>風險等級 <span class="info"></span></th>
             <td>一般風險</td>
             <td></td>
-            <td><a class="btn" href="#" target="_blank">客戶風險等級</a></td>
+            <td><a class="btn" href="#" target="_blank">客戶風險等級查詢</a></td>
           </tr>
           <tr>
-            <th>保護特殊註記</th>
+            <th>保戶特殊註記</th>
             <td> </td>
             <td></td>
             <td></td>
