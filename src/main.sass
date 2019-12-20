@@ -174,8 +174,9 @@ main
 .tables 
   position: relative
   display: flex
-  align-items: center
+  align-items: flex-start
   flex-direction: column
+  overflow-x: scroll
   
 thead
   background: $header
@@ -190,11 +191,10 @@ thead
       border-top-right-radius: 10px
 table 
   text-align: left
-  display: block
   border-collapse: seperate
   border-spacing: 0
   margin: 10px 
-  width: 97%
+  width: 1260px
   word-break: break-word
   border-radius: 10px
   border: 1px solid $header
@@ -271,7 +271,6 @@ table
     text-align: center
 .products
   text-align: center
-  width: 1206px
   .subhead
     padding: 7px 5px
     font-size: 14px
@@ -282,6 +281,8 @@ table
     .subhead__wrapper
       display: flex
       justify-content: center
+      flex-basis: 100%
+      flex: 1
     .order__key
       cursor: pointer
     &:nth-child(2)

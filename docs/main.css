@@ -101,6 +101,8 @@
     cursor: pointer; }
 
 .pagination {
+  margin-left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -466,8 +468,9 @@ main {
 .tables {
   position: relative;
   display: flex;
-  align-items: center;
-  flex-direction: column; }
+  align-items: flex-start;
+  flex-direction: column;
+  overflow-x: scroll; }
 
 thead {
   background: rgba(195, 227, 227, 0.4); }
@@ -485,11 +488,10 @@ thead {
 
 table {
   text-align: left;
-  display: block;
   border-collapse: seperate;
   border-spacing: 0;
   margin: 10px;
-  width: 97%;
+  width: 1260px;
   word-break: break-word;
   border-radius: 10px;
   border: 1px solid rgba(195, 227, 227, 0.4); }
@@ -574,8 +576,7 @@ table {
   text-align: center; }
 
 .products {
-  text-align: center;
-  width: 1206px; }
+  text-align: center; }
   .products .subhead {
     padding: 7px 5px;
     font-size: 14px;
@@ -585,7 +586,9 @@ table {
     font-weight: bold; }
     .products .subhead .subhead__wrapper {
       display: flex;
-      justify-content: center; }
+      justify-content: center;
+      flex-basis: 100%;
+      flex: 1; }
     .products .subhead .order__key {
       cursor: pointer; }
     .products .subhead:nth-child(2) {
