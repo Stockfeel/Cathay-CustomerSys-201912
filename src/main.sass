@@ -138,6 +138,7 @@ main
 
 .navigation 
   position: relative
+  background: #fff
   ul
     display: flex
     justify-content: center
@@ -205,6 +206,7 @@ table
     +font(16px, $text)
     font-weight: bold
     vertical-align: top
+    line-height: 22px
   td
     +font(16px, $text)
     padding: 12px 20px
@@ -227,14 +229,24 @@ table
       border: 1px solid $primary
 
 .basic 
+  th
+    width: 175px
   td
     &:nth-child(2)
       border-right: none
     &:nth-child(3)
+      width: 215px
       border-left: none
       border-right: 1px solid $header
 
 .contact 
+  th
+    width: 175px
+  tr:nth-child(2)
+    td:first-child
+      width: 200px
+    td:nth-child(2)
+      width: 240px
   td
     &:nth-child(2)
       border-right: none
@@ -259,20 +271,27 @@ table
 .products
   text-align: center
   .subhead
-    padding: 10px
+    padding: 7px 5px
+    font-size: 14px
     background:#f1f1f1
     border-radius: 0
     cursor: pointer
+    font-weight: bold
     .subhead__wrapper
       display: flex
+      justify-content: center
     .order__key
       cursor: pointer
+    &:nth-child(2)
+      width: 130px
+    &:nth-child(5), &:nth-child(8) 
+      width: 110px
+    &:nth-child(6), &:nth-child(9)
+      width: 100px
+    &:nth-child(11)
+      width: 120px
   td
     padding: 10px 5px
-  .products__name 
-    text-align: right
-    .link 
-      text-align: center
 
 .table__link
   display: flex

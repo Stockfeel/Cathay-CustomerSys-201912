@@ -194,12 +194,16 @@
   font-size: 12px;
   cursor: pointer; }
 
+.icon__wrapper {
+  width: 100%; }
+
 .icon {
   width: 16px;
   height: 16px;
-  text-align: right;
+  margin-top: 5px;
+  margin-left: 70%;
   display: inline-block;
-  background: url("./asset/invalid-name.svg");
+  background: url("./asset/term.svg");
   background-position: center;
   background-repeat: no-repeat; }
 
@@ -422,7 +426,8 @@ main {
   top: 274px; }
 
 .navigation {
-  position: relative; }
+  position: relative;
+  background: #fff; }
   .navigation ul {
     display: flex;
     justify-content: center;
@@ -496,7 +501,8 @@ table {
     font-size: 16px;
     color: #616161;
     font-weight: bold;
-    vertical-align: top; }
+    vertical-align: top;
+    line-height: 22px; }
   table td {
     font-size: 16px;
     color: #616161;
@@ -525,12 +531,25 @@ table {
         background-color: #05b074;
         border: 1px solid #05b074; }
 
+.basic th {
+  width: 175px; }
+
 .basic td:nth-child(2) {
   border-right: none; }
 
 .basic td:nth-child(3) {
+  width: 215px;
   border-left: none;
   border-right: 1px solid rgba(195, 227, 227, 0.4); }
+
+.contact th {
+  width: 175px; }
+
+.contact tr:nth-child(2) td:first-child {
+  width: 200px; }
+
+.contact tr:nth-child(2) td:nth-child(2) {
+  width: 240px; }
 
 .contact td:nth-child(2) {
   border-right: none; }
@@ -556,20 +575,27 @@ table {
 .products {
   text-align: center; }
   .products .subhead {
-    padding: 10px;
+    padding: 7px 5px;
+    font-size: 14px;
     background: #f1f1f1;
     border-radius: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    font-weight: bold; }
     .products .subhead .subhead__wrapper {
-      display: flex; }
+      display: flex;
+      justify-content: center; }
     .products .subhead .order__key {
       cursor: pointer; }
+    .products .subhead:nth-child(2) {
+      width: 130px; }
+    .products .subhead:nth-child(5), .products .subhead:nth-child(8) {
+      width: 110px; }
+    .products .subhead:nth-child(6), .products .subhead:nth-child(9) {
+      width: 100px; }
+    .products .subhead:nth-child(11) {
+      width: 120px; }
   .products td {
     padding: 10px 5px; }
-  .products .products__name {
-    text-align: right; }
-    .products .products__name .link {
-      text-align: center; }
 
 .table__link {
   display: flex;

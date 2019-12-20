@@ -5,6 +5,7 @@ html
     title 國泰人壽客服輔銷系統
     link(rel='stylesheet' type='text/css' href='./font.css')  
     link(rel='stylesheet' type='text/css' href='./main.css')  
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
   body
     .popup
       img(src='./asset/cancel.svg').popup__cancel.popup__close
@@ -135,7 +136,7 @@ html
               td
                 a.btn(href='#' target="_blank") 客戶風險等級查詢
             tr
-              th 保戶特殊註記
+              th 保戶特殊註記 #[span.info]
               td 
               td
               td
@@ -172,13 +173,68 @@ html
                 a.btn(href='#' target="_blank") 保單健檢
         table.products
           thead 
-            td(colspan=productInfo.length) 保單資訊
+            td(colspan=14) 保單資訊
             tr.products__titles
-              each val in productInfo 
-                td.subhead
-                  .subhead__wrapper
-                    p.order__key= val.name
-                    div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 序號
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  .order__key 
+                    p 保單號碼
+                    p 收費代號
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 商品名稱
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 要保人姓名
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 要保人ID
+                  div.order.up                    
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 要保人生日
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 被保人姓名
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 被保人ID
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 被保人生日
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 契約狀況
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  .order__key 
+                    p 下次應繳日 
+                    p 繳費管道
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 墊繳本息
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 貸款金額/貸款利息
+                  div.order.up
+              td.subhead
+                .subhead__wrapper
+                  p.order__key 繳息終期
+                  div.order.up
           tbody 
             while n < 50
               tr
@@ -186,7 +242,10 @@ html
                 td 
                   a.link 48677377322
                   a.link A77536Y
-                td HN1富貴保本三福
+                td 
+                  p.link HN1富貴保本三福
+                  .icon__wrapper
+                    .icon.link
                 td 
                   p 林國泰
                   p.type 公司件
