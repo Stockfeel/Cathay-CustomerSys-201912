@@ -585,6 +585,7 @@ table {
     cursor: pointer;
     font-weight: bold; }
     .products .subhead .subhead__wrapper {
+      max-width: 85%;
       display: flex;
       justify-content: center;
       flex-basis: 100%;
