@@ -485,6 +485,7 @@ thead {
 
 table {
   text-align: left;
+  display: block;
   border-collapse: seperate;
   border-spacing: 0;
   margin: 10px;
@@ -573,7 +574,8 @@ table {
   text-align: center; }
 
 .products {
-  text-align: center; }
+  text-align: center;
+  width: 1206px; }
   .products .subhead {
     padding: 7px 5px;
     font-size: 14px;
