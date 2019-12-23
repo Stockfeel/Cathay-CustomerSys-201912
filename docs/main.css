@@ -610,7 +610,8 @@ table.customer td:nth-child(3) {
   border-left: none; }
 
 table.event th {
-  text-align: center; }
+  text-align: center;
+  width: 120px; }
 
 table.event td {
   text-align: center; }
