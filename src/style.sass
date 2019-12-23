@@ -195,6 +195,16 @@ $text: #616161
 .success 
   font-weight: bold
   color: $primary 
+  &:before 
+    content: ' '
+    position: absolute
+    width: 32px 
+    height: 32px
+    background: url('./asset/check.svg')
+    background-position: center
+    background-repeat: no-repeat
+    margin-left: -20px
+    margin-top: 5px
 .fail 
   font-weight: bold
   color: #d2465f

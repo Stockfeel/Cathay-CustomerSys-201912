@@ -154,6 +154,16 @@
 .success {
   font-weight: bold;
   color: #05b074; }
+  .success:before {
+    content: ' ';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url("./asset/check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: -20px;
+    margin-top: 5px; }
 
 .fail {
   font-weight: bold;
@@ -587,8 +597,15 @@ table.customer td:nth-child(3) {
 table.customer td:last-child {
   width: 33.33%; }
 
+table.event th {
+  text-align: center; }
+
 table.event td {
   text-align: center; }
+  table.event td:nth-child(7) {
+    width: 150px; }
+  table.event td:nth-child(6) {
+    width: 100; }
 
 table.products {
   text-align: center; }
