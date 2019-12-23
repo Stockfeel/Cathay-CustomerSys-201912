@@ -589,18 +589,20 @@ table.contact td:nth-child(3) {
 table.contact tr:last-child td:last-child {
   border-right: 1px solid rgba(195, 227, 227, 0.4); }
 
+table.customer th {
+  width: 150px; }
+
+table.customer td:nth-child(1) {
+  padding: 0; }
+
 table.customer td:nth-child(2) {
   border-right: none; }
 
 table.customer td:nth-child(3) {
   border-left: none; }
 
-table.customer td:last-child {
-  width: 33.33%; }
-
 table.event th {
-  text-align: center;
-  min-width: 120px; }
+  text-align: center; }
 
 table.event td {
   text-align: center; }

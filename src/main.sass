@@ -275,17 +275,20 @@ table.contact
 
 
 table.customer
+  th
+    width: 150px
   td 
+    &:nth-child(1)
+      padding: 0
     &:nth-child(2)
       border-right: none
     &:nth-child(3)
       border-left: none
-    &:last-child
-      width: 33.33%
+    // &:last-child
+    //   width: 33.33%
 table.event
   th
     text-align: center
-    min-width: 120px
   td
     text-align: center
     &:nth-child(7)
