@@ -80,9 +80,24 @@ header
     &:checked
       outline: none
       background: $primary
-  input[type="radio"]::-ms-expand
+  input[type="radio"]::-ms-check
     display: none
-
+    -webkit-appearance: none
+    -moz-appearance: none
+    -ms-appearance: none
+    -o-appearance: none
+    appearance: none
+    background-color: white
+    box-shadow: 0 0 0 4px white, 0 0 0 5px $primary
+    border-radius: 10px
+    width: 100%
+    display: inline-block
+    width: 12px
+    height: 12px
+    cursor: pointer
+    &:checked
+      outline: none
+      background: $primary
 
 .input__label
   display: flex
@@ -213,6 +228,7 @@ table
   word-break: break-word
   border-radius: 10px
   border: 1px solid $header
+  table-layout:fixed
   th
     max-width: 85px
     border: 1px solid $header

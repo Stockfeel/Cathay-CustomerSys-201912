@@ -363,6 +363,24 @@ header {
     .search__input input[type="radio"]:checked {
       outline: none;
       background: #05b074; }
+  .search__input input[type="radio"]::-ms-check {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background-color: white;
+    box-shadow: 0 0 0 4px white, 0 0 0 5px #05b074;
+    border-radius: 10px;
+    width: 100%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    cursor: pointer; }
+    .search__input input[type="radio"]::-ms-check:checked {
+      outline: none;
+      background: #05b074; }
 
 .input__label {
   display: flex;
@@ -546,78 +564,78 @@ table {
         background-color: #05b074;
         border: 1px solid #05b074; }
 
-.basic th {
+table.basic th {
   width: 175px; }
 
-.basic td:nth-child(2) {
+table.basic td:nth-child(2) {
   border-right: none; }
 
-.basic td:nth-child(3) {
+table.basic td:nth-child(3) {
   width: 215px;
   border-left: none;
   border-right: 1px solid rgba(195, 227, 227, 0.4); }
 
-.contact th {
+table.contact th {
   width: 175px; }
 
-.contact tr:nth-child(2) td:first-child {
+table.contact tr:nth-child(2) td:first-child {
   width: 200px; }
 
-.contact tr:nth-child(2) td:nth-child(2) {
+table.contact tr:nth-child(2) td:nth-child(2) {
   width: 240px; }
 
-.contact td:nth-child(2) {
+table.contact td:nth-child(2) {
   border-right: none; }
 
-.contact td:nth-child(3) {
+table.contact td:nth-child(3) {
   border-left: none; }
 
-.contact tr:last-child td:last-child {
+table.contact tr:last-child td:last-child {
   border-right: 1px solid rgba(195, 227, 227, 0.4); }
 
-.customer td:nth-child(2) {
+table.customer td:nth-child(2) {
   border-right: none; }
 
-.customer td:nth-child(3) {
+table.customer td:nth-child(3) {
   border-left: none; }
 
-.customer td:last-child {
+table.customer td:last-child {
   width: 33.33%; }
 
-.event td {
+table.event td {
   text-align: center; }
 
-.products {
+table.products {
   text-align: center; }
-  .products .subhead {
+  table.products .subhead {
     padding: 7px 5px;
     font-size: 14px;
     background: #f1f1f1;
     border-radius: 0;
     cursor: pointer;
     font-weight: bold; }
-    .products .subhead .subhead__wrapper {
+    table.products .subhead .subhead__wrapper {
       max-width: 85%;
       display: flex;
       justify-content: center;
       flex-basis: 100%;
       flex: 1;
       margin: 0 auto; }
-    .products .subhead .order__key {
+    table.products .subhead .order__key {
       cursor: pointer; }
-    .products .subhead:nth-child(1) {
+    table.products .subhead:nth-child(1) {
       width: 64px; }
-    .products .subhead:nth-child(2) {
+    table.products .subhead:nth-child(2) {
       width: 130px; }
-    .products .subhead:nth-child(5), .products .subhead:nth-child(8) {
+    table.products .subhead:nth-child(5), table.products .subhead:nth-child(8) {
       width: 110px; }
-    .products .subhead:nth-child(6), .products .subhead:nth-child(9) {
+    table.products .subhead:nth-child(6), table.products .subhead:nth-child(9) {
       width: 80px; }
-    .products .subhead:nth-child(11) {
+    table.products .subhead:nth-child(11) {
       width: 120px; }
-    .products .subhead:nth-child(13) {
+    table.products .subhead:nth-child(13) {
       width: 100px; }
-  .products td {
+  table.products td {
     padding: 10px 5px; }
 
 .table__link {
