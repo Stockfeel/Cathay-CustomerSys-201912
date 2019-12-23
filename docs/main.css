@@ -336,7 +336,15 @@ header {
       color: #05b074;
       background-color: white;
       border: 1px solid white; }
+    .header__search button.btn:focus {
+      border: none;
+      outline: none;
+      background: #05b074;
+      box-shadow: 0 6px 12px 0 #85cbcb, inset 0 3px 6px 0 rgba(16, 111, 78, 0.81); }
     .header__search button.btn:hover {
+      border: none;
+      color: white;
+      background: #106f4e;
       cursor: pointer; }
 
 .search__input {

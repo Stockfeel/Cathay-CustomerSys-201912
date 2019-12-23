@@ -22,7 +22,10 @@ window.addEventListener('scroll', (evt) => {
 document.querySelector('.navigation').addEventListener('click', (evt) => {
   console.log(evt.target.tagName)
   if(evt.target.tagName === 'LI') {
-    evt.target.parentNode.querySelectorAll('li').forEach(item => item.classList.remove('select'))
+    const arr = evt.target.parentNode.querySelectorAll('li');
+    for(let i = 0; i < arr.length; i += 1) {
+      arr[i].classList.remove('select')
+    }
     evt.target.classList.add('select')
   }
 })

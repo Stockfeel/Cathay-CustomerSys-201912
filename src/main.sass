@@ -43,7 +43,15 @@ header
     padding: 10px 40px
     +btn($primary, white)
     box-shadow: 0 6px 12px 0 #85cbcb
+    &:focus  
+      border: none
+      outline: none
+      background: $primary
+      box-shadow: 0 6px 12px 0 #85cbcb, inset 0 3px 6px 0 rgba(16, 111, 78, 0.81)
     &:hover 
+      border: none
+      color: white
+      background: #106f4e
       cursor: pointer
 
 .search__input
@@ -284,8 +292,6 @@ table.customer
       border-right: none
     &:nth-child(3)
       border-left: none
-    // &:last-child
-    //   width: 33.33%
 table.event
   th
     text-align: center

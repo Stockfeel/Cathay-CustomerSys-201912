@@ -26,9 +26,12 @@ document.querySelector('.navigation').addEventListener('click', function(evt) {
   console.log(evt.target.tagName);
 
   if (evt.target.tagName === 'LI') {
-    evt.target.parentNode.querySelectorAll('li').forEach(function(item) {
-      return item.classList.remove('select');
-    });
+    var arr = evt.target.parentNode.querySelectorAll('li');
+
+    for (var i = 0; i < arr.length; i += 1) {
+      arr[i].classList.remove('select');
+    }
+
     evt.target.classList.add('select');
   }
 }); // inputs
