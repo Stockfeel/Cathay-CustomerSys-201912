@@ -116,11 +116,17 @@ header
     transform: translateY(-30px)
     transition: .2s
   li
-    padding: 10px 50px
+    display: flex
+    justify-content: center
+    align-items: center
     margin-right: 20px
     +btn(white, $secondary)
     border: 1px solid $secondary
     cursor: pointer
+    width: 200px
+    height: 35px
+    font-size: 16px
+    font-weight: normal
     
 .result__info
   padding-left: 30px
@@ -134,15 +140,17 @@ header
 main
   width: 66.66%
   position: absolute
-  top: 274px
+  top: 330px
 
 .navigation 
   position: relative
-  background: #fff
+  height: 54px
+  background: rgba(255, 255, 255, 0.8)
   ul
+    margin: 0
     display: flex
     justify-content: center
-    +size(100%, auto)
+    +size(100%, 100%)
     li
       position: relative
       padding-left: 34.6px
@@ -284,16 +292,21 @@ table
       justify-content: center
       flex-basis: 100%
       flex: 1
+      margin: 0 auto
     .order__key
       cursor: pointer
+    &:nth-child(1)
+      width: 64px
     &:nth-child(2)
       width: 130px
     &:nth-child(5), &:nth-child(8) 
       width: 110px
     &:nth-child(6), &:nth-child(9)
-      width: 100px
+      width: 80px
     &:nth-child(11)
       width: 120px
+    &:nth-child(13)
+      width: 100px
   td
     padding: 10px 5px
 
