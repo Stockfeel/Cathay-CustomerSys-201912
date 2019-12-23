@@ -82,22 +82,8 @@ header
       background: $primary
   input[type="radio"]::-ms-expand
     display: none
-    -webkit-appearance: none
-    -moz-appearance: none
-    -ms-appearance: none
-    -o-appearance: none
-    appearance: none
-    background-color: white
-    box-shadow: 0 0 0 4px white, 0 0 0 5px $primary
-    border-radius: 10px
-    width: 100%
-    display: inline-block
-    width: 12px
-    height: 12px
-    cursor: pointer
-    &:checked
-      outline: none
-      background: $primary
+
+
 .input__label
   display: flex
   justify-content: center
@@ -258,7 +244,7 @@ table
       min-width: 150px
       border: 1px solid $primary
 
-.basic 
+table.basic 
   th
     width: 175px
   td
@@ -269,7 +255,7 @@ table
       border-left: none
       border-right: 1px solid $header
 
-.contact 
+table.contact 
   th
     width: 175px
   tr:nth-child(2)
@@ -287,7 +273,7 @@ table
       border-right: 1px solid $header
 
 
-.customer
+table.customer
   td 
     &:nth-child(2)
       border-right: none
@@ -295,10 +281,10 @@ table
       border-left: none
     &:last-child
       width: 33.33%
-.event
+table.event
   td
     text-align: center
-.products
+table.products
   text-align: center
   .subhead
     padding: 7px 5px
