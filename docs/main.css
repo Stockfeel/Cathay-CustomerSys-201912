@@ -364,8 +364,7 @@ header {
       outline: none;
       background: #05b074; }
   .search__input input[type="radio"]::-ms-check {
-    outline: none;
-    background: #05b074; }
+    display: none; }
 
 .input__label {
   display: flex;
@@ -511,7 +510,8 @@ table {
   border-radius: 10px;
   border: 1px solid rgba(195, 227, 227, 0.4); }
   table th {
-    max-width: 85px;
+    width: 85px;
+    text-align: left;
     border: 1px solid rgba(195, 227, 227, 0.4);
     border-right: none;
     border-bottom: none;

@@ -81,8 +81,7 @@ header
       outline: none
       background: $primary
   input[type="radio"]::-ms-check
-    outline: none
-    background: $primary
+    display: none
 
 .input__label
   display: flex
@@ -215,7 +214,8 @@ table
   border: 1px solid $header
   table-layout:fixed
   th
-    max-width: 85px
+    width: 85px
+    text-align: left
     border: 1px solid $header
     border-right: none
     border-bottom: none
