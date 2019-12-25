@@ -6,7 +6,7 @@ document.querySelector('.back').addEventListener('click', function() {
 });
 window.addEventListener('scroll', function(evt) {
   if (window.pageYOffset > 274) {
-    document.querySelector('.header__result').style.height = '70px';
+    document.querySelector('.header__result').style.height = '60px';
     document.querySelector('.navigation').classList.add('shadow');
     document.querySelector('.result__list').classList.add('hidden');
     document.querySelector('.result__title').classList.add('hidden');
