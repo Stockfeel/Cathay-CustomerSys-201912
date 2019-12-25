@@ -288,6 +288,9 @@ a {
 button {
   border: none; }
 
+td, p {
+  word-break: break-all; }
+
 header {
   width: 100%;
   position: fixed;
@@ -504,8 +507,7 @@ main {
   position: relative;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  overflow-x: scroll; }
+  flex-direction: column; }
 
 thead {
   background: rgba(195, 227, 227, 0.4); }
@@ -526,11 +528,12 @@ table {
   border-collapse: seperate;
   border-spacing: 0;
   margin: 10px;
-  width: 99%;
-  min-width: 845px;
+  min-width: 99%;
+  width: 840px;
   word-break: break-word;
   border-radius: 10px;
-  border: 1px solid rgba(195, 227, 227, 0.4); }
+  border: 1px solid rgba(195, 227, 227, 0.4);
+  table-layout: fixed; }
   table th {
     max-width: 150px;
     text-align: left;
