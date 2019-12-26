@@ -296,6 +296,9 @@ td, p {
 tr:hover {
   background: #F7FCF6; }
 
+thead tr:hover {
+  background: rgba(195, 227, 227, 0.4); }
+
 header {
   width: 100%;
   position: fixed;
@@ -616,6 +619,9 @@ table.event td {
 
 table.event tr:hover {
   background: white; }
+
+table.event thead tr:hover {
+  background: rgba(195, 227, 227, 0.4); }
 
 table.products {
   text-align: center; }
