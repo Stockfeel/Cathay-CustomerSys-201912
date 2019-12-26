@@ -2,7 +2,7 @@
 document.querySelector('.back').addEventListener('click', () => scrollTo(document.body,0,1250))
 window.addEventListener('scroll', (evt) => {
   if(window.pageYOffset > 274) {
-    document.querySelector('.header__result').style.height = '60px'
+    document.querySelector('.header__result').style.height = '50px'
     document.querySelector('.navigation').classList.add('shadow')
     document.querySelector('.result__list').classList.add('hidden')
     document.querySelector('.result__title').classList.add('hidden')

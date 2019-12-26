@@ -331,10 +331,10 @@ header {
   padding: 20px 0;
   margin: 0;
   width: 100%;
-  height: 60px;
+  height: 50px;
   background: #bdebbf; }
   .header__search button.btn {
-    padding: 10px 40px;
+    padding: 5px 40px;
     color: white;
     background-color: #05b074;
     border: 1px solid #05b074;
@@ -400,8 +400,8 @@ header {
 
 .header__result {
   width: 100%;
-  height: 100px;
-  padding: 10px;
+  height: 120px;
+  padding: 5px;
   background: #e9f9ea; }
 
 .result__title {
@@ -422,9 +422,8 @@ header {
 
 .result__list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
-  padding-left: 30px;
   width: 100%;
   height: auto;
   transform: translateY(0);
@@ -452,8 +451,7 @@ header {
       border: 1px solid #f2b200; }
 
 .result__info {
-  padding-left: 30px;
-  text-align: left;
+  text-align: center;
   font-size: 12px;
   color: #333333;
   opacity: 1; }
@@ -467,7 +465,7 @@ main {
 
 .navigation {
   position: relative;
-  height: 45px;
+  height: 35px;
   background: rgba(255, 255, 255, 0.8); }
   .navigation ul {
     margin: 0;
@@ -492,6 +490,8 @@ main {
       content: '|';
       color: #616161;
       font-weight: normal; }
+    .navigation ul li:first-child {
+      margin-left: 0px; }
 
 .todos {
   display: inline-block;
