@@ -310,19 +310,19 @@ header {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 63px;
+  height: 30px;
   background: #05b074;
-  transition: .2s;
-  height: 63px; }
+  transition: .2s; }
   .header__warning > * {
-    margin-top: 4px;
+    margin-top: 2px;
     text-align: center; }
   .header__warning h1 {
     font-size: 16px;
     color: white; }
-  .header__warning p {
+  .header__warning span {
     font-size: 12px;
-    color: #fff; }
+    color: #fff;
+    margin-left: 10px; }
   .header__warning.hidden {
     height: 0px; }
     .header__warning.hidden p {
@@ -406,8 +406,8 @@ header {
 
 .header__result {
   width: 100%;
-  height: 120px;
-  padding: 5px;
+  height: 95px;
+  padding: 3px;
   background: #e9f9ea; }
 
 .result__title {
@@ -428,14 +428,16 @@ header {
 
 .result__list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin: 8px 0;
+  padding-left: 30px;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
   transform: translateY(0);
   transition: .2s; }
   .result__list.hidden {
-    transform: translateY(-30px);
+    transform: translateY(-20px);
     transition: .2s; }
   .result__list li {
     display: flex;
@@ -457,7 +459,8 @@ header {
       border: 1px solid #f2b200; }
 
 .result__info {
-  text-align: center;
+  text-align: left;
+  padding-left: 30px;
   font-size: 12px;
   color: #333333;
   opacity: 1; }
@@ -467,7 +470,7 @@ header {
 main {
   width: 100%;
   position: absolute;
-  top: 330px; }
+  top: 210px; }
 
 .navigation {
   position: relative;

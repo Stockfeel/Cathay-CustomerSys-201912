@@ -13,7 +13,7 @@ window.addEventListener('scroll', function(evt) {
     document.querySelector('.result__info').classList.add('hidden');
     document.querySelector('.header__warning').classList.add('hidden');
   } else {
-    document.querySelector('.header__result').style.height = '129px';
+    document.querySelector('.header__result').style.height = '100px';
     document.querySelector('.navigation').classList.remove('shadow');
     document.querySelector('.result__list').classList.remove('hidden');
     document.querySelector('.result__title').classList.remove('hidden');

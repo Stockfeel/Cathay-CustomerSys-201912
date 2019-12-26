@@ -12,18 +12,18 @@ header
   justify-content: center
   align-items: center
   flex-direction: column
-  +size(100%, 63px)
+  +size(100%, 30px)
   background: $primary
   transition: .2s
-  height: 63px
   & > *
-    margin-top: 4px
+    margin-top: 2px
     text-align: center
   h1
     +font(16px, white)
-  p
+  span
     font-size: 12px
     color: #fff
+    margin-left: 10px
   &.hidden
     height: 0px
     p
@@ -98,8 +98,8 @@ header
     margin-right: 10px
 
 .header__result 
-  +size(100%, 120px)
-  padding: 5px
+  +size(100%, 95px)
+  padding: 3px
   background: $primaryLighter
 
 .result__title 
@@ -120,13 +120,15 @@ header
 
 .result__list 
   display: flex
-  justify-content: center
+  justify-content: flex-start
+  margin: 8px 0
+  padding-left: 30px
   flex-wrap: wrap
   +size(100%, auto)
   transform: translateY(0)
   transition: .2s
   &.hidden
-    transform: translateY(-30px)
+    transform: translateY(-20px)
     transition: .2s
   li
     display: flex
@@ -142,7 +144,8 @@ header
     font-weight: normal
     
 .result__info
-  text-align: center
+  text-align: left
+  padding-left: 30px
   font-size: 12px
   color: #333333
   opacity: 1
@@ -152,7 +155,7 @@ header
 main
   width: 100%
   position: absolute
-  top: 330px
+  top: 210px
 
 .navigation 
   position: relative
