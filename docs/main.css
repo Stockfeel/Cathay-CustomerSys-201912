@@ -293,6 +293,9 @@ button {
 td, p {
   word-break: break-all; }
 
+tr:hover {
+  background: #F7FCF6; }
+
 header {
   width: 100%;
   position: fixed;
@@ -610,6 +613,9 @@ table.event td {
   text-align: center;
   vertical-align: middle;
   padding: 10px; }
+
+table.event tr:hover {
+  background: white; }
 
 table.products {
   text-align: center; }
