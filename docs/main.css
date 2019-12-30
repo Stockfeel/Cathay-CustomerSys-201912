@@ -671,3 +671,6 @@ table.products {
 #tooltip-notRecommend {
   margin-top: -100px;
   margin-left: 130px; }
+
+#tooltip-address {
+  margin-left: 50px; }

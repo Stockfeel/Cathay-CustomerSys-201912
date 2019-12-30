@@ -66,6 +66,13 @@ document.querySelector('#info-notRecommend').addEventListener('mouseout', () => 
   document.querySelector('#tooltip-notRecommend').classList.add('hidden')
 })
 
+document.querySelector('#info-address').addEventListener('mouseover', () => {
+  document.querySelector('#tooltip-address').classList.remove('hidden')
+})
+document.querySelector('#info-address').addEventListener('mouseout', () => {
+  document.querySelector('#tooltip-address').classList.add('hidden')
+})
+
 document.querySelector('.popup').addEventListener('click', (evt) => {
   if(evt.target.classList.contains('popup__close')) {
     document.querySelector('.popup').classList.add('hidden')
