@@ -646,7 +646,9 @@ table.products {
   table.products thead tr:nth-child(2) td:first-child {
     max-width: 40px; }
   table.products thead tr:nth-child(2) td:nth-child(4), table.products thead tr:nth-child(2) td:nth-child(6) {
-    max-width: 50px; }
+    max-width: 40px; }
+  table.products thead tr:nth-child(2) td:nth-child(10) {
+    max-width: 40px; }
   table.products thead tr:nth-child(2) td:last-child {
     max-width: 40px; }
   table.products td {
