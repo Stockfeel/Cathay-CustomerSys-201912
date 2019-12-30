@@ -309,27 +309,18 @@ table.products
       top: 0
       & > *
        display: inline-block
-       vertical-align: top
-    .order__key
-      cursor: pointer
-      max-width: 50px   
-    &:nth-child(2),&:nth-child(5),&:nth-child(8)
-      max-width: 80px
-      .order__key
-        max-width: 60px  
-    &:nth-child(1), &:nth-child(10), &:nth-child(12), &:nth-child(14)
-      max-width: 60px
-      .order__key
-        max-width: 40px  
-    &:nth-child(3)
-      width: 145px
-      .order__key
-        max-width: 80px 
-    &:nth-child(11), &:nth-child(13)
-      max-width: 100px
-      .order__key
-        max-width: 80px      
-      
+       vertical-align: top    
+  thead
+    tr:nth-child(3)
+      td
+        border-top: solid 1px #ccc
+    tr:nth-child(2)
+      td:first-child
+        max-width: 40px
+      td:nth-child(4),td:nth-child(6)
+        max-width: 50px
+      td:last-child
+        max-width: 40px
   td
     padding: 10px 5px
 

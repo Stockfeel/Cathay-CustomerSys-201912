@@ -641,25 +641,14 @@ table.products {
       table.products .subhead .subhead__wrapper > * {
         display: inline-block;
         vertical-align: top; }
-    table.products .subhead .order__key {
-      cursor: pointer;
-      max-width: 50px; }
-    table.products .subhead:nth-child(2), table.products .subhead:nth-child(5), table.products .subhead:nth-child(8) {
-      max-width: 80px; }
-      table.products .subhead:nth-child(2) .order__key, table.products .subhead:nth-child(5) .order__key, table.products .subhead:nth-child(8) .order__key {
-        max-width: 60px; }
-    table.products .subhead:nth-child(1), table.products .subhead:nth-child(10), table.products .subhead:nth-child(12), table.products .subhead:nth-child(14) {
-      max-width: 60px; }
-      table.products .subhead:nth-child(1) .order__key, table.products .subhead:nth-child(10) .order__key, table.products .subhead:nth-child(12) .order__key, table.products .subhead:nth-child(14) .order__key {
-        max-width: 40px; }
-    table.products .subhead:nth-child(3) {
-      width: 145px; }
-      table.products .subhead:nth-child(3) .order__key {
-        max-width: 80px; }
-    table.products .subhead:nth-child(11), table.products .subhead:nth-child(13) {
-      max-width: 100px; }
-      table.products .subhead:nth-child(11) .order__key, table.products .subhead:nth-child(13) .order__key {
-        max-width: 80px; }
+  table.products thead tr:nth-child(3) td {
+    border-top: solid 1px #ccc; }
+  table.products thead tr:nth-child(2) td:first-child {
+    max-width: 40px; }
+  table.products thead tr:nth-child(2) td:nth-child(4), table.products thead tr:nth-child(2) td:nth-child(6) {
+    max-width: 50px; }
+  table.products thead tr:nth-child(2) td:last-child {
+    max-width: 40px; }
   table.products td {
     padding: 10px 5px; }
 

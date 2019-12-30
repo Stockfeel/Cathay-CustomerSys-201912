@@ -65,7 +65,7 @@ html
                 a.btn(href='#' target="_blank") 變更
             tr 
               th 生日／年齡 
-              td 76/11/26(#[span.tag 31歲])
+              td 76/11/26(31歲)
               td.warning 姓名不一致
               td(rowspan="2").btn__list
                 a.btn(href='#' target="_blank") 查詢 
@@ -80,7 +80,7 @@ html
               td(colspan='5').info 通訊資料
           tbody 
             tr 
-              th.info 保單地址（最新異動件）
+              th.info 保單地址
               td(colspan='2') 台中市北屯區大鵬路陳平里12巷5弄258號6樓之3
               td
                 p.warning 同 ID 有不同地址
@@ -178,66 +178,64 @@ html
           thead 
             td(colspan=14) 保單資訊
             tr.products__titles
-              td.subhead
+              td.subhead(rowspan=2)
                 .subhead__wrapper
-                  p.order__key 序號
+                  .order__key 序號
                   div.order.up
               td.subhead
                 .subhead__wrapper
-                  .order__key 
-                    p 保單號碼
-                    p 收費代號
+                  .order__key 保單號碼
+                  div.order.up
+              td.subhead(rowspan=2)
+                .subhead__wrapper
+                  .order__key 商品名稱
+                  div.order.up
+              td.subhead(rowspan=2)
+                .subhead__wrapper
+                  .order__key 要保人姓名
                   div.order.up
               td.subhead
                 .subhead__wrapper
-                  p.order__key 商品名稱
-                  div.order.up
-              td.subhead
-                .subhead__wrapper
-                  p.order__key 要保人姓名
-                  div.order.up
-              td.subhead
-                .subhead__wrapper
-                  p.order__key 要保人ID
+                  .order__key 要保人ID
                   div.order.up                    
-              td.subhead
+              td.subhead(rowspan=2)
                 .subhead__wrapper
-                  p.order__key 要保人生日
+                  .order__key 被保人姓名
                   div.order.up
               td.subhead
                 .subhead__wrapper
-                  p.order__key 被保人姓名
+                  .order__key 被保人ID
                   div.order.up
-              td.subhead
-                .subhead__wrapper
-                  p.order__key 被保人ID
-                  div.order.up
-              td.subhead
-                .subhead__wrapper
-                  p.order__key 被保人生日
-                  div.order.up
-              td.subhead
+              td.subhead(rowspan=2)
                 .subhead__wrapper
                   p.order__key 契約狀況
                   div.order.up
               td.subhead
                 .subhead__wrapper
-                  .order__key 
-                    p 下次應繳日 
-                    p 繳費管道
+                  .order__key.subhead__border 下次應繳日 
                   div.order.up
               td.subhead
                 .subhead__wrapper
-                  p.order__key 墊繳本息
+                  .order__key 墊繳本息
                   div.order.up
               td.subhead
-                .subhead__wrapper
-                  p.order__key 貸款金額/貸款利息
-                  div.order.up
+                .order__key 貸款金額
+              td.subhead(rowspan=2)
+                p.order__key 繳息終期
+            tr.products__titles
               td.subhead
-                .subhead__wrapper
-                  p.order__key 繳息終期
-                  div.order.up
+                .order__key 收費代號
+              td.subhead
+                .order__key 要保人生日
+              td.subhead
+                .order__key 被保人生日
+              td.subhead
+                p.order__key 契約狀況
+              td.subhead
+                .order__key 繳費管道
+              td.subhead
+                .order__key 貸款利息
+
           tbody 
             while n < 50
               tr
@@ -252,16 +250,18 @@ html
                 td 
                   p 林國泰
                   p.type 公司件
-                td H123456789
-                td 76/11/26
+                td 
+                  p H123456789
+                  p 76/11/26
                 td 林國泰
-                td H123456789
-                td 76/11/26
+                td 
+                  p H123456789
+                  p 76/11/26
                 td 
                   p 終身險滿期
                   p 逾期
                 td 
-                  a.link 48677377322
+                  a.link 1090909
                   p 扣繳/自繳
                 td 0
                 td 0/0 
