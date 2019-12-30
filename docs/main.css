@@ -8,7 +8,7 @@
   line-height: 1.38;
   letter-spacing: normal;
   text-align: center;
-  padding: 3px 10px;
+  padding: 2px 10px;
   cursor: pointer; }
 
 .order {
@@ -163,7 +163,7 @@
     background: url("./asset/check.svg");
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 10px;
+    margin-top: 5px;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%); }
@@ -227,7 +227,7 @@
   width: 150px;
   background: #fdeab0;
   margin-left: 10px;
-  padding: 7px 13px;
+  padding: 2px 13px;
   border-radius: 20px;
   font-size: 18px;
   color: #f2b200; }
@@ -340,7 +340,7 @@ header {
   height: 50px;
   background: #bdebbf; }
   .header__search button.btn {
-    padding: 5px 40px;
+    padding: 2px 40px;
     color: white;
     background-color: #05b074;
     border: 1px solid #05b074;
@@ -406,7 +406,7 @@ header {
 
 .header__result {
   width: 100%;
-  height: 95px;
+  height: 90px;
   padding: 3px;
   background: #e9f9ea; }
 
@@ -450,8 +450,6 @@ header {
     border: 1px solid #f2b200;
     cursor: pointer;
     width: 200px;
-    height: 35px;
-    font-size: 16px;
     font-weight: normal; }
     .result__list li:hover {
       color: white;
@@ -555,7 +553,7 @@ table {
   table td {
     font-size: 16px;
     color: #616161;
-    padding: 5px 10px;
+    padding: 2px 10px;
     border: 1px solid rgba(195, 227, 227, 0.4);
     border-left: none;
     border-bottom: none;
@@ -573,7 +571,7 @@ table {
       background-color: white;
       border: 1px solid white;
       border-radius: 30px;
-      margin: 7.5px;
+      margin: 2px;
       min-width: 150px;
       border: 1px solid #05b074; }
       table td .btn:hover {
@@ -618,7 +616,7 @@ table.event th {
 table.event td {
   text-align: center;
   vertical-align: middle;
-  padding: 10px; }
+  padding: 5px; }
 
 table.event tr:hover {
   background: white; }
@@ -654,9 +652,13 @@ table.products {
       max-width: 60px; }
       table.products .subhead:nth-child(1) .order__key, table.products .subhead:nth-child(10) .order__key, table.products .subhead:nth-child(12) .order__key, table.products .subhead:nth-child(14) .order__key {
         max-width: 40px; }
-    table.products .subhead:nth-child(3), table.products .subhead:nth-child(11), table.products .subhead:nth-child(13) {
+    table.products .subhead:nth-child(3) {
+      width: 145px; }
+      table.products .subhead:nth-child(3) .order__key {
+        max-width: 80px; }
+    table.products .subhead:nth-child(11), table.products .subhead:nth-child(13) {
       max-width: 100px; }
-      table.products .subhead:nth-child(3) .order__key, table.products .subhead:nth-child(11) .order__key, table.products .subhead:nth-child(13) .order__key {
+      table.products .subhead:nth-child(11) .order__key, table.products .subhead:nth-child(13) .order__key {
         max-width: 80px; }
   table.products td {
     padding: 10px 5px; }
