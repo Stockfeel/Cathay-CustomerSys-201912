@@ -106,6 +106,10 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+  .pagination .pagination__info {
+    color: #05b074; }
+    .pagination .pagination__info span {
+      margin: 0 10px; }
   .pagination .pagination__btn {
     margin: 0 10px;
     border: 1px solid #05b074;
@@ -373,6 +377,7 @@ header {
   .search__input input[type='text'] {
     width: 150px;
     height: 30px;
+    font-size: 14px;
     border-radius: 4px;
     border: solid 1px #a7a8aa;
     padding: 10px;
@@ -490,7 +495,7 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 12px;
+      font-size: 14px;
       color: #616161;
       cursor: pointer; }
       .navigation ul li.select {
