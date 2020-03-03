@@ -119,4 +119,18 @@ Math.easeInOutQuad = function(t, b, c, d) {
   if (t < 1) return c / 2 * t * t + b;
   t--;
   return -c / 2 * (t * (t - 2) - 1) + b;
-};
+}; // for last row hover 
+
+
+document.querySelector('.basic tbody tr:last-child').addEventListener('mouseover', function(evt) {
+  document.querySelector('.basic tr:nth-child(2) td:last-child').classList.add('active');
+});
+document.querySelector('.basic tbody tr:last-child').addEventListener('mouseout', function(evt) {
+  document.querySelector('.basic tr:nth-child(2) td:last-child').classList.remove('active');
+});
+document.querySelector('.contact tbody tr:last-child').addEventListener('mouseover', function(evt) {
+  document.querySelector('.contact tr:nth-child(2) td:last-child').classList.add('active');
+});
+document.querySelector('.contact tbody tr:last-child').addEventListener('mouseout', function(evt) {
+  document.querySelector('.contact tr:nth-child(2) td:last-child').classList.remove('active');
+});

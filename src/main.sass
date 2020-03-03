@@ -19,9 +19,9 @@ header
     margin-top: 2px
     text-align: center
   h1
-    +font(16px, white)
+    +font($subtitle, white)
   span
-    font-size: 12px
+    font-size: $small
     color: #fff
     margin-left: 10px
   &.hidden
@@ -61,7 +61,7 @@ header
   &>*
     margin-right: 30px
   input[type='text']
-    +size(204px, 30px)
+    +size(150px, 30px)
     border-radius: 4px 
     border: solid 1px #a7a8aa
     padding: 10px
@@ -106,7 +106,7 @@ header
   position: relative
   display: inline-block
   margin-left: 50%
-  font-size: 16px 
+  font-size: $subtitle 
   text-align: center
   color: $text
   font-weight: normal
@@ -144,7 +144,7 @@ header
 .result__info
   text-align: left
   padding-left: 30px
-  font-size: 12px
+  font-size: $small
   color: #333333
   opacity: 1
   &.hidden
@@ -170,7 +170,7 @@ main
       display: flex
       justify-content: center
       align-items: center
-      +font(16px, #616161)
+      +font($paragraph, #616161)
       cursor: pointer
       &.select
         font-weight: bold
@@ -191,7 +191,7 @@ main
   +size(16px, 16px)
   background: #ea6e76
   color: white
-  font-size: 12px
+  font-size: $small
   border-radius: 8px
       
 .tables 
@@ -202,7 +202,7 @@ thead
     +size(auto, 30px)
     padding: 0
     text-align: center
-    +font(16px, $text)
+    +font($subtitle, $text)
     &:first-child
       border-top-left-radius: 10px
     &:last-child
@@ -224,17 +224,17 @@ table
     border-right: none
     border-bottom: none
     padding: 5px 20px 5px 10px
-    +font(16px, $text)
+    +font($subtitle, $text)
     font-weight: bold
-    vertical-align: top
+    vertical-align: center
     line-height: 22px
   td
-    +font(16px, $text)
-    padding: 2px 10px
+    +font($subtitle, $text)
+    padding: 5px 10px
     border: 1px solid $header
     border-left: none
     border-bottom: none
-    vertical-align: top
+    vertical-align: center
     &:last-child
       border-right: none
     p.warning
@@ -297,7 +297,7 @@ table.products
   text-align: center
   .subhead
     padding: 7px 5px
-    font-size: 14px
+    font-size: $paragraph
     background:#f1f1f1
     border-radius: 0
     cursor: pointer

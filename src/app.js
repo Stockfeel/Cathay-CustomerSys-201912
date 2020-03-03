@@ -118,3 +118,20 @@ Math.easeInOutQuad = function (t, b, c, d) {
 	t--;
 	return -c/2 * (t*(t-2) - 1) + b;
 };
+
+// for last row hover 
+document.querySelector('.basic tbody tr:last-child').addEventListener('mouseover', (evt) => {
+  document.querySelector('.basic tr:nth-child(2) td:last-child').classList.add('active')
+})
+
+document.querySelector('.basic tbody tr:last-child').addEventListener('mouseout', (evt) => {
+  document.querySelector('.basic tr:nth-child(2) td:last-child').classList.remove('active')
+})
+
+document.querySelector('.contact tbody tr:last-child').addEventListener('mouseover', (evt) => {
+  document.querySelector('.contact tr:nth-child(2) td:last-child').classList.add('active')
+})
+
+document.querySelector('.contact tbody tr:last-child').addEventListener('mouseout', (evt) => {
+  document.querySelector('.contact tr:nth-child(2) td:last-child').classList.remove('active')
+})

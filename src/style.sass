@@ -7,6 +7,12 @@ $secondaryLight: #fdeab0
 $header: rgba(195, 227, 227, 0.4)
 $text: #616161
 
+
+$small: 10px
+$paragraph: 12px
+$subtitle: 14px
+$title: 16px
+
 // default 
 @mixin initialize 
   *
@@ -32,12 +38,14 @@ $text: #616161
   a
     color: #000
     text-decoration: none
-    +font(16px, $text)
+    +font($subtitle, $text)
     display: block
   button
     border: none
   td, p
     word-break: break-all
+  td.active 
+    background: #F7FCF6
   tr:hover 
     background: #F7FCF6
   thead tr:hover
@@ -72,7 +80,7 @@ $text: #616161
 .btn 
   display: inline-block
   border-radius: 20px
-  font-size: 16px
+  font-size: $subtitle
   font-weight: bold
   font-stretch: normal
   font-style: normal
@@ -102,7 +110,7 @@ $text: #616161
   +size(260px, auto)
   padding: 15px 18px
   text-align: left
-  +font(14px, $text)
+  +font($paragraph, $text)
   font-weight: normal
   background: #fff
   box-shadow: 0 0 15px 0 rgba(210, 70, 95, 0.5)
@@ -175,7 +183,7 @@ $text: #616161
       margin: 5px
       +flexCenter()
       +size(30px)
-      +font(16px, white)
+      +font($subtitle, white)
       border-radius: 15px
       color: $primary
       &.now
@@ -219,7 +227,7 @@ $text: #616161
   font-weight: bold
   color: #d2465f
 .warning
-  +font(14px, #ee7f02)
+  +font($paragraph, #ee7f02)
   &:before 
     content: ' '
     position: absolute
@@ -249,7 +257,7 @@ $text: #616161
   color: #008cbb
   border-radius: 20px
   margin-top: 2px
-  font-size: 12px
+  font-size: $small
   cursor: pointer
 .icon__wrapper
   width: 100%
@@ -269,7 +277,7 @@ $text: #616161
   margin-left: 10px
   padding: 2px 13px
   border-radius: 20px
-  +font(18px, $secondary)
+  +font($title, $secondary)
   &::before
     content: ''
     width: 16px 
@@ -284,7 +292,7 @@ $text: #616161
 .tag
   color: $primary
 .annotate 
-  +font(14px, #0081b8)
+  +font($paragraph, #0081b8)
   
 // utlis class
 .hidden
