@@ -366,9 +366,10 @@ header {
 .search__input {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-right: 20px; }
   .search__input > * {
-    margin-right: 30px; }
+    margin-right: 10px; }
   .search__input input[type='text'] {
     width: 150px;
     height: 30px;
